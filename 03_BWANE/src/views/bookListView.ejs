@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title><%=title%></title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/new-age.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" class="bg-info pt-5">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="<%=nav[0].link %>"><%=nav[0].title %></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <%for(let i = 1; i < nav.length; i++) {%>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="<%=nav[i].link %>"><%=nav[i].title %></a>
+          </li>
+          <%}%>
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<%for(let i = 0; i < books.length; i++) {%>
+<div class="row">
+  <br>
+  <div class="col-md-2 col-sm-3 text-center">
+    <a href="#"><img class="w-50" src="/media/demo-book.jpg"></a>
+  </div>
+  <div class="col-md-10 col-sm-9">
+    <h3><%=books[i].title %></h3>
+    <div class="row">
+        <div class="col-xs-9">
+          <h4><span class="label label-default"><%=books[i].author %></span></h4>
+          <h4>
+              <small class="text-muted">subtext</small>
+              <a href="/books/<%=books[i]._id %>" class="text-muted">
+                Read More!
+              </a>
+          </h4>
+        </div>
+        <div class="col-xs-3"></div>
+    </div>
+    <br><br>
+  </div>
+</div>
+<hr>
+<%}%>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="js/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/new-age.min.js"></script>
+
+</body>
+
+</html>

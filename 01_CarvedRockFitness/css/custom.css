@@ -1,0 +1,89 @@
+.tBox{
+   background-color: #e5e5e5;
+   border: 1px solid #a7acb1;
+   padding: 10px 20px;
+}
+.tRow{
+   height: 200px;
+}
+.logo{
+   width: auto;
+   height: 150px;
+}
+.banner{
+   height: 150px;
+   background-image: url(../media/shutterstock_116403520.jpg);
+   background-size: cover;
+   background-position: center -100px;
+}
+.callOuts{
+   border: 1px solid #a7acb1;
+}
+.callOuts img{
+   width: 100px;
+   height: auto;
+}
+.callOuts .icn{
+   width: 100px;
+   height: auto;
+   text-align: center;
+   color: #2a9ebc;
+}
+.ftr{
+   background-color: #424243;
+	height: 100%;
+	color: #fff;
+	font-size: .8rem;
+}
+.ftr a{
+   color: #fff;
+}
+.ftr p{
+	font-size: .7rem;
+}
+.ftr div{
+   font-size: .7rem;
+}
+.ftr h5{
+	font-weight: 800;
+	font-size: 16px;
+}
+.ftr img{
+
+}
+.w-10{width: 10%!important;}
+.w-15{width: 15%!important;}
+.w-20{width: 20%!important;}
+.w-25{width: 25%!important;}
+.w-30{width: 30%!important;}
+.w-35{width: 35%!important;}
+.w-40{width: 40%!important;}
+.w-45{width: 45%!important;}
+.w-50{width: 50%!important;}
+.w-55{width: 55%!important;}
+.w-60{width: 60%!important;}
+.w-65{width: 65%!important;}
+.w-70{width: 70%!important;}
+.w-75{width: 75%!important;}
+.w-80{width: 80%!important;}
+.w-85{width: 85%!important;}
+.w-90{width: 90%!important;}
+.w-95{width: 95%!important;}
+.w-100{width: 100%!important;}
+/*/////////////////////////////////////////////////////////////////////////////////////// Responsive
+///////////////////////////////////////////////////////////////////////////////////////*/
+@media(min-width: 480px){
+.banner{height: 200px;}
+.w-sm{width: 100%!important;}
+}
+@media(min-width: 768px){
+.banner{height: 300px;}
+.w-sm{width: 50%!important;}
+}
+@media(min-width: 992px){
+.banner{height: 400px;}
+.w-sm{width: 25%!important;}
+}
+@media(min-width: 1200px){
+
+}
