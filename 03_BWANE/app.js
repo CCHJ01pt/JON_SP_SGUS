@@ -22,11 +22,11 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(cookieParser());
 app.use(session({secret: 'library'}));
 
-app.use(express.static(path.join(__dirname, '/public/')));
-app.use('/media', express.static(path.join(__dirname, 'public/media')));
-app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
-app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
-app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
+app.use(express.static(path.join(__dirname,'/public/')));
+app.use('/media', express.static(path.join(__dirname,'/public/media')));
+app.use('/css', express.static(path.join(__dirname,'/node_modules/bootstrap/dist/css')));
+app.use('/js', express.static(path.join(__dirname,'/node_modules/bootstrap/dist/js')));
+app.use('/js', express.static(path.join(__dirname,'/node_modules/jquery/dist')));
 
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
