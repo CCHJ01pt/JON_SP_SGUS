@@ -29,7 +29,7 @@
       <%} %>
      </ul>
 
-     <form class="form-inline my-2 my-lg-0">
+     <form class="form-inline my-2 my-lg-0" method="POST">
        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
      </form>
@@ -39,7 +39,15 @@
 <!-- Navigation Bar End-->
 <!-- Main Content -->
 
-<h1>HELLO!!!</h1>
+<h1>Link ONE!!!</h1>
+
+<%for(let i = 0; i < result.length; i++) { %>
+  <div>
+    <div>ID: <%=result[i].id %></div>
+    <div>Name: <%=result[i].name %></div>
+    <div>Country: <%=result[i].country %></div>
+  </div>
+<%} %>
 
 <!-- Main Content End-->
 <!-- Bootstrap & Fontawesome JS Files -->
