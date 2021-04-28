@@ -39,24 +39,20 @@
 <!-- Navigation Bar End-->
 <!-- Main Content -->
 
-<h1>Link ONE!!!</h1>
+<h1>Link TWO!!!</h1>
 
-<div id="datalist">
-  <%for(let i = 0; i < result.length; i++) { %>
-    <table id='data'>
-      <tr>
-        <td>ID: <%=result[i].id %></td>
-        <td>Name: <%=result[i].name %></td>
-        <td>Country: <%=result[i].country %></td>
-      </tr>
-    </table>
-  <%} %>
+<div id="demo">
 </div>
+
+<!-- User interface to trigger f1() in ajax.js -->
+<input type="button" value="Submit" onclick="f1()">
 
 <!-- Main Content End-->
 <!-- Bootstrap & Fontawesome JS Files -->
-<script src="/js/jquery.slim.min.js"></script>
+<!-- <script src="/js/jquery.slim.min.js"></script> -->
+<script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/all.min.js"></script>
+<script src="/js/ajax.js"></script>
 </body>
 </html>

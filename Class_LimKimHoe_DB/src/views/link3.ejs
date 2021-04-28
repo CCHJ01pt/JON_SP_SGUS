@@ -39,24 +39,43 @@
 <!-- Navigation Bar End-->
 <!-- Main Content -->
 
-<h1>Link ONE!!!</h1>
+<h1>Link THREE!!!</h1>
 
-<div id="datalist">
-  <%for(let i = 0; i < result.length; i++) { %>
-    <table id='data'>
-      <tr>
-        <td>ID: <%=result[i].id %></td>
-        <td>Name: <%=result[i].name %></td>
-        <td>Country: <%=result[i].country %></td>
-      </tr>
-    </table>
-  <%} %>
+<div>
+  <h3>Available data</h3>
+
+  <div id="datalist">
+    <%for(let i = 0; i < result.length; i++) { %>
+      <table id='data'>
+        <tr>
+          <td>ID: <%=result[i].id %></td>
+          <td>Name: <%=result[i].name %></td>
+          <td>Country: <%=result[i].country %></td>
+        </tr>
+      </table>
+    <%} %>
+  </div>
 </div>
+<div id="search">
+  <input id="search-data" />
+
+  <!-- User interface to trigger f2() in search.js -->
+  <input type="button" value="Submit" onclick="f2()">
+
+</div>
+
+<div id="demo">
+</div>
+
 
 <!-- Main Content End-->
 <!-- Bootstrap & Fontawesome JS Files -->
-<script src="/js/jquery.slim.min.js"></script>
+<!-- <script src="/js/jquery.slim.min.js"></script> -->
+<script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/all.min.js"></script>
+<script src="/js/ajax.js"></script>
+<script src="/js/search.js"></script>
+
 </body>
 </html>
