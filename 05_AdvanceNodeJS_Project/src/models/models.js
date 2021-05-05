@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-export const ProductSchema = new Schema({
+const ProductSchema = new Schema({
    name:{
       type: String,
       required: 'Product name'
@@ -22,3 +22,5 @@ export const ProductSchema = new Schema({
       default: Date.now
    },
 });
+// Exports variable
+module.exports = ProductSchema;

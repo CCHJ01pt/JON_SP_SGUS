@@ -5,7 +5,7 @@ const { addnewProduct,
       deleteProduct
    } = require('../controllers/controllers');
 
-   export const routes = (app) => {
+const routes = (app) => {
    app.route('/products')
    // Get products
    .get(getProducts)
@@ -20,3 +20,5 @@ const { addnewProduct,
    // Delete specific product
    .delete(deleteProduct);
 }
+
+module.exports = routes;
