@@ -22,5 +22,5 @@ const ProductSchema = new Schema({
       default: Date.now
    },
 });
-// Exports variable
+
 module.exports = ProductSchema;

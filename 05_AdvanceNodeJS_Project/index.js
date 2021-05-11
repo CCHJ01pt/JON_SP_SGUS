@@ -3,6 +3,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const routes = require('./src/routes/routes');
 
+// const result = require('./src/routes/routes');
+// const routes = result.routes;
+
 const app = express();
 const PORT = 4000;
 
@@ -19,6 +22,9 @@ app.use(bodyParser.json());
 
 // routes
 routes(app);
+
+console.log("testing" + 10 * 90);
+
 
 app.get('/', (req, res) =>
     res.send(`Store server running on port ${PORT}`)
