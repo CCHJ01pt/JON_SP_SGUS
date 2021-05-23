@@ -1,0 +1,14 @@
+{
+   "name": "adv_nodejs",
+   "version": "1.0.0",
+   "dependencies": {
+      "express": "github:expressjs/express",
+      "request": "^2.88.2"
+   },
+   "devDependencies": {
+      "@babel/cli": "^7.13.16"
+   },
+   "optionalDependencies": {
+      "nodemon": "^2.0.7"
+   }
+}
