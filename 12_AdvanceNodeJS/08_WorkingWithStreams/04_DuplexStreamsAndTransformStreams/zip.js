@@ -14,11 +14,13 @@ const progress = new Transform({
 
 // create read stream from filename
 fs.createReadStream(file)
-   // decrypting
-   .pipe(crypto.createDecipheriv('aes-192-gcm', 'a_secret'))
-
    // pipe to transform stream
-   .pipe(zlib.createGunzip())
+   .pipe(zlib.createGzip())
+
+   // encrypting
+   //.pipe(crypto.createCipher('aes-192', 'a_secret'))
+   .pipe(crypto.createCipheriv('aes-256-cbc', Buffer.from('1234567890abcdefghijklmnopqrstuv'), Buffer.from('1234567890abcdef')))
+   //.pipe(crypto.createCipheriv('aes-256-cbc', Buffer.from(crypto.randomBytes(32)), crypto.randomBytes(16)))
 
    // adds progress indicator
    // .on('data', () => process.stdout.write('> '))
@@ -27,7 +29,7 @@ fs.createReadStream(file)
    .pipe(progress)
 
    // pipe to writable stream with gz extension
-   .pipe(fs.createWriteStream(file.slice(0, -3)))
+   .pipe(fs.createWriteStream(file + '.zz'))
 
    // adds a message when finish process
    .on('finish', () => console.log(' Done!!'));
